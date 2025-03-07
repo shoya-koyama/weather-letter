@@ -18,9 +18,9 @@ function updateTable(forecast) {
       weather.textContent = item.weather;
       row.appendChild(weather);
   
-      const temperature = document.createElement('td');
-      temperature.textContent = item.temperature;
-      row.appendChild(temperature);
+      const temp = document.createElement('td');
+      temp.textContent = item.temp;
+      row.appendChild(temp);
       const pressure = document.createElement('td');
       pressure.textContent = item.pressure;
       row.appendChild(pressure);
@@ -39,7 +39,7 @@ function updateGraph(forecast) {
     datasets: [
       {
         label: 'Temparature',
-        data: forecast.map(x => x.temperature)
+        data: forecast.map(x => x.temp)
       },
       {
         label: 'Humidity',
